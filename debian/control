@@ -1,0 +1,12 @@
+Source: ros-jade-worldlib
+Section: misc
+Priority: extra
+Maintainer: Russell Toris <rctoris@wpi.edu>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, libcurl4-openssl-dev, libjsoncpp-dev, libmysqlclient-dev, libyaml-cpp-dev, pkg-config, ros-jade-catkin, ros-jade-geometry-msgs, ros-jade-roscpp, ros-jade-roslib, ros-jade-tf2, ros-jade-tf2-ros
+Homepage: http://ros.org/wiki/worldlib
+Standards-Version: 3.9.2
+
+Package: ros-jade-worldlib
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, libcurl4-openssl-dev, libjsoncpp-dev, libmysqlclient-dev, libyaml-cpp-dev, ros-jade-geometry-msgs, ros-jade-roscpp, ros-jade-roslib, ros-jade-tf2, ros-jade-tf2-ros
+Description: C++ Library for World State Learning Methods
