@@ -1,0 +1,21 @@
+ros-jade-worldlib (0.0.1-0utopic) utopic; urgency=high
+
+  * added observer
+  * yaml fix
+  * added surface checks
+  * initial testing of geolife data complete
+  * added geolife parsing
+  * probability of item still being on a surface added
+  * added persistence model
+  * mutable accesors
+  * abstract node started
+  * nodes started
+  * started parser for interactive world
+  * random value from gaussian used as removal estimate
+  * created Client --> SqlClient classes
+  * basics of worldlib started
+  * Contributors: Russell Toris
+
+ -- Russell Toris <rctoris@wpi.edu>  Thu, 07 May 2015 04:00:00 -0000
+
+
