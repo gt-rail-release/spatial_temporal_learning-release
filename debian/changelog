@@ -1,0 +1,11 @@
+ros-jade-world-item-observer (0.0.1-0trusty) trusty; urgency=high
+
+  * added observer
+  * yaml fix
+  * marks items as removed
+  * added surface checks
+  * Contributors: Russell Toris
+
+ -- Russell Toris <rctoris@wpi.edu>  Thu, 07 May 2015 04:00:00 -0000
+
+
