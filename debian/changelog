@@ -1,0 +1,9 @@
+ros-jade-spatial-temporal-learning (0.0.1-0vivid) vivid; urgency=high
+
+  * basics of worldlib started
+  * metapackage started
+  * Contributors: Russell Toris
+
+ -- Russell Toris <rctoris@wpi.edu>  Thu, 07 May 2015 04:00:00 -0000
+
+
