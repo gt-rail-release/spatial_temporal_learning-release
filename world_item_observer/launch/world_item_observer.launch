@@ -11,9 +11,6 @@
   <arg name="spatial_world_password" default="" />
   <arg name="spatial_world_db" default="rms" />
 
-  <!-- Observer Parameters -->
-  <arg name="base_frame_id" default="base_footprint" />
-
   <!-- Set Global Params -->
   <param name="/worldlib/spatial_world_client/host" type="str" value="$(arg spatial_world_host)" />
   <param name="/worldlib/spatial_world_client/port" type="int" value="$(arg spatial_world_port)" />
@@ -22,7 +19,5 @@
   <param name="/worldlib/spatial_world_client/db" type="str" value="$(arg spatial_world_db)" />
 
   <!-- Main Node -->
-  <node name="world_item_observer" pkg="world_item_observer" type="world_item_observer" output="screen">
-    <param name="base_frame_id" value="$(arg base_frame_id)" />
-  </node>
+  <node name="world_item_observer" pkg="world_item_observer" type="world_item_observer" output="screen" />
 </launch>
