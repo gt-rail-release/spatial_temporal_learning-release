@@ -47,3 +47,21 @@ rooms:
           - name: "Coffee Table Surface"
             frame_id: "coffee_table_surface_link"
             nav_frame_id: "coffee_table_nav_goal_link"
+      - name: "Right Shelves"
+        aliases: ["Shelves, Shelf, Shelving Unit, Bookcase"]
+        frame_id: "right_shelves_link"
+        width: 0.765
+        depth: 0.305
+        placement_surfaces:
+          - name: "Right Shelves"
+            frame_id: "right_shelves_link"
+            nav_frame_id: "right_shelves_nav_goal_link"
+      - name: "TV Stand"
+        aliases: ["TV, TV Unit"]
+        frame_id: "tv_link"
+        width: 0.600
+        depth: 0.350
+        placement_surfaces:
+          - name: "TV Stand Surface"
+            frame_id: "tv_surface_link"
+            nav_frame_id: "tv_nav_goal_link"
