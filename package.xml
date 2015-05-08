@@ -1,6 +1,6 @@
  <package>
   <name>spatial_temporal_learning</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>Learning Methods Based on Spatial and Temporal Data</description>
 
   <maintainer email="rctoris@wpi.edu">Russell Toris</maintainer>
