@@ -34,7 +34,7 @@ set(WORLDLIB_EXTERN_LIBS
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS geometry_msgs roscpp tf2
+  CATKIN_DEPENDS geometry_msgs roscpp tf2 tf2_ros
   DEPENDS Boost ${WORLDLIB_EXTERN_LIBS}
 )
 
