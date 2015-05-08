@@ -1,6 +1,6 @@
 <package>
   <name>world_item_observer</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>Persistent Observer of Items in the World for the Spatial World Database</description>
 
   <author email="rctoris@wpi.edu">Russell Toris</author>
