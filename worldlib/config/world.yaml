@@ -1,0 +1,49 @@
+fixed_frame_id: "map"
+rooms:
+  - name: "Kitchen"
+    frame_id: "ilab"
+    width: 4.700
+    depth: 2.400
+    surfaces:
+      - name: "Kitchen Table"
+        frame_id: "kitchen_table_link"
+        width: 0.880
+        depth: 0.900
+        placement_surfaces:
+          - name: "Kitchen Table Surface"
+            frame_id: "kitchen_table_surface_link"
+            nav_frame_id: "kitchen_table_nav_goal_link"
+        pois:
+          - name: "Chair"
+            frame_id: "kitchen_chair_link"
+      - name: "Kitchen Counter"
+        frame_id: "kitchen_counter_link"
+        width: 2.455
+        depth: 0.645
+        aliases: ["Counter", "Sink", "Sink Unit"]
+        placement_surfaces:
+          - name: "Right Counter"
+            frame_id: "kitchen_counter_right_surface_link"
+            nav_frame_id: "kitchen_counter_right_nav_goal_link"
+          - name: "Left Counter"
+            frame_id: "kitchen_counter_left_surface_link"
+            nav_frame_id: "kitchen_counter_left_nav_goal_link"
+          - name: "Sink"
+            frame_id: "sink_link"
+            nav_frame_id: "sink_nav_goal_link"
+        pois:
+          - name: "Sink"
+            frame_id: "sink_link"
+  - name: "Living Room"
+    frame_id: "ilab"
+    width: 4.700
+    depth: 3.500
+    surfaces:
+      - name: "Coffee Table"
+        frame_id: "coffee_table_link"
+        width: 1.220
+        depth: 0.505
+        placement_surfaces:
+          - name: "Coffee Table Surface"
+            frame_id: "coffee_table_surface_link"
+            nav_frame_id: "coffee_table_nav_goal_link"
