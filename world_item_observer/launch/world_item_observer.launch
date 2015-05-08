@@ -1,0 +1,28 @@
+<!--
+   Author: Russell Toris, Worcester Polytechnic Institute
+  Version: April 28, 2015
+-->
+
+<launch>
+  <!-- Spatial World Database -->
+  <arg name="spatial_world_host" default="localhost" />
+  <arg name="spatial_world_port" default="3306" />
+  <arg name="spatial_world_user" default="ros" />
+  <arg name="spatial_world_password" default="" />
+  <arg name="spatial_world_db" default="rms" />
+
+  <!-- Observer Parameters -->
+  <arg name="base_frame_id" default="base_footprint" />
+
+  <!-- Set Global Params -->
+  <param name="/worldlib/spatial_world_client/host" type="str" value="$(arg spatial_world_host)" />
+  <param name="/worldlib/spatial_world_client/port" type="int" value="$(arg spatial_world_port)" />
+  <param name="/worldlib/spatial_world_client/user" type="str" value="$(arg spatial_world_user)" />
+  <param name="/worldlib/spatial_world_client/password" type="str" value="$(arg spatial_world_password)" />
+  <param name="/worldlib/spatial_world_client/db" type="str" value="$(arg spatial_world_db)" />
+
+  <!-- Main Node -->
+  <node name="world_item_observer" pkg="world_item_observer" type="world_item_observer" output="screen">
+    <param name="base_frame_id" value="$(arg base_frame_id)" />
+  </node>
+</launch>
