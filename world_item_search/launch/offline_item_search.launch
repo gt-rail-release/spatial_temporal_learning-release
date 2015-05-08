@@ -1,0 +1,29 @@
+<!--
+   Author: Russell Toris, Worcester Polytechnic Institute
+  Version: April 28, 2015
+-->
+
+<launch>
+  <!-- Interactive World Model Server -->
+  <arg name="interactive_world_model_host" default="robotsfor.me" />
+  <arg name="interactive_world_model_port" default="80" />
+
+  <!-- Spatial World Database -->
+  <arg name="spatial_world_host" default="localhost" />
+  <arg name="spatial_world_port" default="3306" />
+  <arg name="spatial_world_user" default="ros" />
+  <arg name="spatial_world_password" default="" />
+  <arg name="spatial_world_db" default="spatial_world_offline" />
+
+  <!-- Set Global Params -->
+  <param name="/worldlib/interactive_world_model_client/host" type="str" value="$(arg interactive_world_model_host)" />
+  <param name="/worldlib/interactive_world_model_client/port" type="int" value="$(arg interactive_world_model_port)" />
+  <param name="/worldlib/spatial_world_client/host" type="str" value="$(arg spatial_world_host)" />
+  <param name="/worldlib/spatial_world_client/port" type="int" value="$(arg spatial_world_port)" />
+  <param name="/worldlib/spatial_world_client/user" type="str" value="$(arg spatial_world_user)" />
+  <param name="/worldlib/spatial_world_client/password" type="str" value="$(arg spatial_world_password)" />
+  <param name="/worldlib/spatial_world_client/db" type="str" value="$(arg spatial_world_db)" />
+
+  <!-- Main Node -->
+  <node name="offline_item_search" pkg="world_item_search" type="offline_item_search" output="screen" />
+</launch>
