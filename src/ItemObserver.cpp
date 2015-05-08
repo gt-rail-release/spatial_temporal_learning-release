@@ -19,11 +19,8 @@ using namespace std;
 using namespace rail::spatial_temporal_learning;
 using namespace rail::pick_and_place;
 
-ItemObserver::ItemObserver() : worldlib::remote::Node(), base_frame_id_("base_footprint")
+ItemObserver::ItemObserver() : worldlib::remote::Node()
 {
-  // check the base frame ID
-  private_node_.getParam("base_frame_id", base_frame_id_);
-
   // load the config
   okay_ &= this->loadWorldYamlFile();
 
@@ -116,15 +113,6 @@ void ItemObserver::recognizedObjectsCallback(const rail_manipulation_msgs::Segme
           seen[surface.getName()].push_back("");
         }
       }
-    }
-
-    // special case -- if nothing was seen, we should mark the closest surface as being empty
-    if (seen.empty())
-    {
-      const worldlib::geometry::Pose p_robot_world = this->transformToWorld(worldlib::geometry::Pose(), base_frame_id_);
-      size_t room_i, surface_i;
-      world_.findClosestSurface(p_robot_world.getPosition(), room_i, surface_i);
-      seen[world_.getRoom(room_i).getSurface(surface_i).getName()].push_back("");
     }
 
     // check what items were no longer seen on the surface
